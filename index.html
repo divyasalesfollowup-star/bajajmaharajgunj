@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Bajaj Maharajgunj — Divya Auto Hub Pvt. Ltd.
+  QR scan landing page · single static file · no build step
+  Deploy: put this file at the root of a repo → Vercel → framework preset "Other"
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bajaj Maharajgunj — Divya Auto Hub Pvt. Ltd. | Showroom Wi-Fi, Price List &amp; Links</title>
+  <meta name="description" content="Welcome to Bajaj Maharajgunj (Divya Auto Hub Pvt. Ltd.), Kathmandu. Connect to our free showroom Wi-Fi, browse the latest Bajaj price list, leave us a Google review, and follow us on Facebook, Instagram &amp; TikTok.">
+  <meta name="theme-color" content="#0F0F12">
+  <meta property="og:title" content="Bajaj Maharajgunj — Divya Auto Hub Pvt. Ltd.">
+  <meta property="og:description" content="Your trusted Bajaj motorcycle destination. Showroom Wi-Fi, latest price list, Google reviews, Facebook, Instagram &amp; TikTok.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Ccircle%20cx='32'%20cy='32'%20r='32'%20fill='%23DA291C'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial,sans-serif'%20font-size='36'%20font-weight='bold'%20text-anchor='middle'%20fill='%23fff'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after{ box-sizing:border-box; margin:0; padding:0; }
+
+    :root{
+      --red:#DA291C;
+      --red-dark:#B01C11;
+      --red-soft:rgba(218,41,28,.09);
+      --black:#0F0F12;
+      --paper:#F4F4F1;
+      --card:#FFFFFF;
+      --line:#E6E6E1;
+      --ink:#15151A;
+      --muted:#6F6F77;
+      --fb:#1877F2;
+      --font-body:'Barlow',-apple-system,'Segoe UI',sans-serif;
+      --font-display:'Barlow Condensed','Arial Narrow',sans-serif;
+      --font-mono:ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,monospace;
+    }
+
+    html{ -webkit-text-size-adjust:100%; }
+
+    body{
+      font-family:var(--font-body);
+      font-size:16px;
+      line-height:1.5;
+      color:var(--ink);
+      background:var(--paper);
+      -webkit-font-smoothing:antialiased;
+      -webkit-tap-highlight-color:transparent;
+    }
+
+    ::selection{ background:var(--red); color:#fff; }
+    svg{ display:block; }
+    button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+    a{ color:inherit; }
+    :focus-visible{ outline:2px solid var(--red); outline-offset:2px; }
+
+    /* ---------- Hero ---------- */
+    .hero{
+      background:var(--black);
+      border-top:4px solid var(--red);
+      color:#fff;
+      text-align:center;
+      padding:28px 20px 72px;
+    }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 14px;
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:999px;
+      font-size:9.5px; font-weight:700; letter-spacing:.22em; text-transform:uppercase;
+      color:#C7C7CE;
+    }
+    .pill i{ width:6px; height:6px; border-radius:50%; background:var(--red); }
+
+    .emblem{ width:118px; height:auto; margin:22px auto 18px; }
+    .ring-text{
+      font-family:var(--font-display);
+      font-size:10px; font-weight:700; letter-spacing:2.4px;
+      fill:#8F8F98;
+    }
+    .emblem-b{
+      font-family:var(--font-display);
+      font-size:47px; font-weight:800;
+      fill:#fff;
+    }
+
+    .wordmark{
+      font-family:var(--font-display);
+      font-weight:800;
+      text-transform:uppercase;
+      line-height:.92;
+    }
+    .wordmark .w1{ display:block; font-size:clamp(2.7rem,13vw,3.55rem); letter-spacing:.05em; }
+    .wordmark .w2{
+      display:block; margin-top:3px;
+      font-size:clamp(1.9rem,9.2vw,2.6rem); letter-spacing:.05em;
+      color:transparent;
+      -webkit-text-stroke:1.5px #E9E9EC;
+    }
+    @supports not (-webkit-text-stroke:1px #fff){
+      .wordmark .w2{ color:#E9E9EC; }
+    }
+
+    .ticks{ display:flex; align-items:center; gap:8px; max-width:250px; margin:18px auto 16px; }
+    .ticks::before, .ticks::after{ content:""; flex:1; height:1px; background:#2C2C33; }
+    .ticks span{ width:20px; height:4px; background:var(--red); transform:skewX(-28deg); }
+
+    .company{ font-size:15px; font-weight:500; color:#C7C7CE; }
+    .tagline{
+      margin-top:9px;
+      font-size:9.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+      color:#83838C;
+    }
+
+    /* ---------- Main ---------- */
+    main{
+      max-width:462px;
+      margin:-46px auto 0;
+      padding:0 16px 44px;
+      position:relative;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 1px 2px rgba(15,15,20,.05), 0 18px 44px -26px rgba(15,15,20,.3);
+    }
+
+    .wifi-card{ padding:22px 20px 20px; }
+
+    .wifi-head{ display:flex; align-items:center; gap:14px; margin-bottom:6px; }
+    .tile{
+      width:48px; height:48px; flex:none;
+      display:grid; place-items:center;
+      border-radius:13px;
+      color:#fff;
+      transition:transform .18s ease;
+    }
+    .tile-red{ background:var(--red); }
+
+    .wifi-head h2{
+      font-family:var(--font-display);
+      font-size:clamp(21px,6vw,25px);
+      font-weight:700; line-height:1.06; letter-spacing:.01em;
+      text-wrap:balance;
+    }
+
+    .wifi-sub{ font-size:13.5px; color:var(--muted); margin-bottom:16px; }
+
+    /* Spec plate: SSID / password / security */
+    .spec{
+      background:#F7F7F3;
+      border:1px solid #E9E9E3;
+      border-radius:13px;
+      overflow:hidden;
+      margin-bottom:16px;
+    }
+    .spec-row{ display:flex; align-items:center; gap:12px; padding:10px 12px 10px 14px; }
+    .spec-row + .spec-row{ border-top:1px solid #E9E9E3; }
+    .spec-label{
+      width:76px; flex:none;
+      font-size:9.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+      color:var(--muted);
+    }
+    .spec-value{
+      flex:1; min-width:0;
+      font-family:var(--font-mono);
+      font-size:14px; font-weight:600; letter-spacing:.01em;
+      word-break:break-all;
+      user-select:all; -webkit-user-select:all;
+      cursor:text;
+    }
+    .copy-btn{
+      width:36px; height:36px; flex:none;
+      display:grid; place-items:center;
+      border:1px solid #E1E1DA; border-radius:9px;
+      background:#fff; color:var(--muted);
+      transition:color .15s, border-color .15s, transform .15s;
+    }
+    .copy-btn:hover{ color:var(--red); border-color:var(--red); }
+    .copy-btn:active{ transform:scale(.92); }
+    .copy-btn .ic-check{ display:none; }
+    .copy-btn.copied{ color:#1E9E52; border-color:#1E9E52; }
+    .copy-btn.copied .ic-copy{ display:none; }
+    .copy-btn.copied .ic-check{ display:block; }
+
+    .btn-connect{
+      width:100%; height:56px;
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      background:var(--red); color:#fff;
+      border-radius:13px;
+      font-size:16px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+      box-shadow:0 12px 24px -12px rgba(218,41,28,.6);
+      transition:background .15s, transform .15s, box-shadow .15s;
+    }
+    @media (hover:hover){
+      .btn-connect:hover{ background:var(--red-dark); transform:translateY(-1px); }
+    }
+    .btn-connect:active{ transform:scale(.98); }
+
+    .wifi-hint{ margin-top:12px; font-size:12.5px; line-height:1.55; color:var(--muted); }
+    .wifi-hint strong{ color:var(--ink); font-weight:700; }
+
+    /* ---------- Section label ---------- */
+    .section-label{ display:flex; align-items:center; gap:14px; margin:30px 2px 14px; }
+    .section-label::before, .section-label::after{ content:""; flex:1; height:1px; background:var(--line); }
+    .section-label span{
+      font-size:10px; font-weight:700; letter-spacing:.24em; text-transform:uppercase;
+      color:var(--muted); white-space:nowrap;
+    }
+
+    /* ---------- Action cards ---------- */
+    .action{
+      display:flex; align-items:center; gap:14px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px 16px;
+      text-decoration:none;
+      box-shadow:0 1px 2px rgba(15,15,20,.04);
+      transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .action + .action{ margin-top:12px; }
+    .action .tile{ width:50px; height:50px; }
+    .action-google .tile{ background:var(--red); }
+    .action-fb .tile{ background:var(--fb); }
+    .action-tt .tile{ background:#101014; }
+    .action-insta .tile{
+      background:linear-gradient(45deg,#FEDA75 0%,#FA7E1E 25%,#D62976 55%,#962FBF 80%,#4F5BD5 100%);
+    }
+
+    .action-text{ display:flex; flex-direction:column; min-width:0; }
+    .action-title{
+      font-family:var(--font-display);
+      font-size:clamp(18px,5vw,20px);
+      font-weight:700; line-height:1.1; letter-spacing:.01em;
+      text-wrap:balance;
+    }
+    .action-sub{
+      display:flex; align-items:center; gap:5px; flex-wrap:wrap;
+      margin-top:3px;
+      font-size:12.5px; color:var(--muted);
+    }
+    .stars{ display:inline-flex; gap:1.5px; color:var(--red); }
+    .action-arrow{ margin-left:auto; flex:none; color:#B9B9BF; transition:transform .18s ease, color .18s ease; }
+
+    @media (hover:hover){
+      .action:hover{
+        transform:translateY(-2px);
+        border-color:#D3D3CC;
+        box-shadow:0 14px 30px -20px rgba(15,15,20,.4);
+      }
+      .action:hover .action-arrow{ transform:translate(2px,-2px); color:var(--ink); }
+      .action:hover .tile{ transform:scale(1.06); }
+      .action-google:hover{ border-color:rgba(218,41,28,.45); }
+      .action-fb:hover{ border-color:rgba(24,119,242,.5); }
+      .action-tt:hover{ border-color:rgba(16,16,20,.55); }
+      .action-insta:hover{ border-color:rgba(214,41,118,.5); }
+    }
+    .action:active{ transform:scale(.985); }
+
+    /* ---------- Price list ---------- */
+    .price-h3{ margin:0; font-size:1rem; font-weight:400; }
+
+    .price-toggle{
+      width:100%;
+      display:flex; align-items:center; gap:14px;
+      padding:14px 16px;
+      text-align:left;
+    }
+    .price-toggle .tile{ width:50px; height:50px; }
+    .price-head-text{ flex:1; min-width:0; }
+    .price-title{
+      display:block;
+      font-family:var(--font-display);
+      font-size:clamp(18px,5vw,20px);
+      font-weight:700; line-height:1.1; letter-spacing:.01em;
+    }
+    .price-meta{ display:block; margin-top:3px; font-size:12.5px; color:var(--muted); }
+    .price-chev{ margin-left:auto; flex:none; color:#B9B9BF; transition:transform .3s ease, color .18s ease; }
+    .price-card.open .price-chev{ transform:rotate(180deg); }
+    @media (hover:hover){
+      .price-toggle:hover .price-chev{ color:var(--ink); }
+    }
+
+    .price-body{
+      display:grid; grid-template-rows:0fr;
+      visibility:hidden;
+      transition:grid-template-rows .38s ease, visibility 0s .38s;
+    }
+    .price-card.open .price-body{
+      grid-template-rows:1fr;
+      visibility:visible;
+      transition:grid-template-rows .38s ease, visibility 0s 0s;
+    }
+    .price-inner{ overflow:hidden; min-height:0; }
+
+    .price-content{ margin:0 16px 18px; padding-top:14px; border-top:1px solid var(--line); }
+
+    .pgroup + .pgroup{ margin-top:16px; }
+    .pg-head{
+      display:flex; align-items:center; gap:8px;
+      padding-bottom:6px; margin-bottom:2px;
+      border-bottom:1px solid #ECECE6;
+    }
+    .pg-name{
+      font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--red);
+    }
+    .ev-tag{
+      font-size:8.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+      background:var(--red-soft); color:var(--red);
+      padding:3px 8px; border-radius:999px;
+    }
+    .pg-count{ margin-left:auto; font-size:10px; font-weight:500; letter-spacing:.06em; color:var(--muted); text-transform:uppercase; }
+
+    .prow{ display:flex; align-items:baseline; gap:8px; padding:8px 0; }
+    .prow .m{ font-size:14.5px; font-weight:500; }
+    .prow .dots{ flex:1; min-width:16px; border-bottom:1px dotted #D9D9D2; transform:translateY(-3px); }
+    .prow .p{ font-size:14.5px; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .prow .p .rs{ font-size:11px; font-weight:600; color:var(--muted); margin-right:3px; }
+
+    .price-note{
+      margin-top:18px;
+      font-size:11.5px; font-style:italic; line-height:1.6;
+      color:var(--muted);
+    }
+
+    /* ---------- Footer ---------- */
+    .footer{
+      background:var(--black);
+      border-top:4px solid var(--red);
+      color:#fff;
+      text-align:center;
+      padding:34px 20px calc(40px + env(safe-area-inset-bottom));
+    }
+    .thanks{
+      display:flex; align-items:center; justify-content:center; gap:9px;
+      font-size:15.5px; font-weight:500;
+    }
+    .thanks svg{ color:var(--red); flex:none; }
+    .auth{
+      display:flex; align-items:center; justify-content:center; gap:7px;
+      margin-top:11px;
+      font-size:9.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+      color:#96969E;
+    }
+    .auth svg{ color:var(--red); flex:none; }
+    .footer-legal{ margin-top:14px; font-size:11px; color:#66666E; }
+
+    /* ---------- Toast ---------- */
+    .toast{
+      position:fixed;
+      left:50%; bottom:calc(18px + env(safe-area-inset-bottom));
+      transform:translate(-50%,12px);
+      display:flex; align-items:center; gap:8px;
+      max-width:calc(100vw - 32px);
+      background:#17171C;
+      border:1px solid rgba(255,255,255,.09);
+      color:#fff;
+      padding:11px 18px 11px 14px;
+      border-radius:999px;
+      font-size:13.5px; font-weight:500;
+      box-shadow:0 14px 34px -10px rgba(0,0,0,.5);
+      opacity:0; pointer-events:none;
+      transition:opacity .25s ease, transform .25s ease;
+      z-index:50;
+    }
+    .toast.show{ opacity:1; transform:translate(-50%,0); }
+    .toast .ic-info{ display:none; }
+    .toast.toast-info .ic-ok{ display:none; }
+    .toast.toast-info .ic-info{ display:block; color:#E8B34B; }
+    .toast .ic-ok{ color:#2FBF71; }
+
+    @media (prefers-reduced-motion: reduce){
+      *, *::before, *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+        transition-delay:0ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <span class="pill"><i aria-hidden="true"></i>Welcome, Rider</span>
+
+    <!-- Circular showroom emblem -->
+    <svg class="emblem" viewBox="0 0 120 120" role="img" aria-label="Bajaj Maharajgunj — Divya Auto Hub emblem">
+      <circle cx="60" cy="60" r="59" fill="#141418"/>
+      <circle cx="60" cy="60" r="58.5" fill="none" stroke="#2C2C33" stroke-width="1"/>
+      <circle cx="60" cy="60" r="54" fill="none" stroke="#DA291C" stroke-width="2"/>
+      <g class="emblem-ring" aria-hidden="true">
+        <defs>
+          <path id="arcTop" d="M16 60 A44 44 0 0 1 104 60"/>
+          <path id="arcBottom" d="M16 60 A44 44 0 0 0 104 60"/>
+        </defs>
+        <text class="ring-text" text-anchor="middle">
+          <textPath href="#arcTop" xlink:href="#arcTop" startOffset="50%">BAJAJ · MAHARAJGUNJ</textPath>
+        </text>
+        <text class="ring-text" text-anchor="middle">
+          <textPath href="#arcBottom" xlink:href="#arcBottom" startOffset="50%">DIVYA AUTO HUB</textPath>
+        </text>
+        <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="45s" repeatCount="indefinite"/>
+      </g>
+      <circle cx="60" cy="60" r="34" fill="#DA291C"/>
+      <circle cx="60" cy="60" r="30" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1"/>
+      <text class="emblem-b" x="60" y="77" text-anchor="middle">B</text>
+    </svg>
+
+    <h1 class="wordmark">
+      <span class="w1">Bajaj</span>
+      <span class="w2">Maharajgunj</span>
+    </h1>
+
+    <div class="ticks" aria-hidden="true"><span></span><span></span></div>
+
+    <p class="company">Divya Auto Hub Pvt. Ltd.</p>
+    <p class="tagline">Your Trusted Bajaj Motorcycle Destination</p>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <!-- ---- Wi-Fi feature card ---- -->
+    <section class="card wifi-card" aria-labelledby="wifiTitle">
+      <div class="wifi-head">
+        <span class="tile tile-red" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg>
+        </span>
+        <h2 id="wifiTitle">Connect to Showroom&nbsp;Wi&#8209;Fi</h2>
+      </div>
+      <p class="wifi-sub">Complimentary high-speed fiber, free for every customer.</p>
+
+      <div class="spec">
+        <div class="spec-row">
+          <span class="spec-label">SSID</span>
+          <span class="spec-value">NTFiber_31D8_2.4G</span>
+          <button class="copy-btn" type="button" data-copy="NTFiber_31D8_2.4G" data-label="Network name" aria-label="Copy network name NTFiber_31D8_2.4G">
+            <svg class="ic-copy" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="ic-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Password</span>
+          <span class="spec-value">ea4dn2fX</span>
+          <button class="copy-btn" type="button" data-copy="ea4dn2fX" data-label="Password" aria-label="Copy Wi-Fi password ea4dn2fX">
+            <svg class="ic-copy" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="ic-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Security</span>
+          <span class="spec-value">WPA / WPA2 · 2.4&nbsp;GHz</span>
+        </div>
+      </div>
+
+      <button class="btn-connect" id="connectBtn" type="button" aria-describedby="wifiHint">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+        Connect Wi&#8209;Fi
+      </button>
+
+      <p class="wifi-hint" id="wifiHint">
+        One-tap join works on most Android phones. On iPhone — or if nothing happens — open
+        <strong>Settings › Wi-Fi</strong>, pick <strong>NTFiber_31D8_2.4G</strong> and type the password above.
+      </p>
+    </section>
+
+    <!-- ---- Social links ---- -->
+    <div class="section-label"><span>Connect With Us</span></div>
+
+    <a class="action action-google" href="https://share.google/K5ScI609GUZPRy3Ga" target="_blank" rel="noopener noreferrer">
+      <span class="tile" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+      </span>
+      <span class="action-text">
+        <span class="action-title">Give Us a Google Review</span>
+        <span class="action-sub">
+          <span class="stars" aria-hidden="true">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </span>
+          <span class="sub-text">Rate your visit — it takes 30 seconds</span>
+        </span>
+      </span>
+      <span class="action-arrow" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+      </span>
+    </a>
+
+    <a class="action action-fb" href="https://www.facebook.com/BajajMaharajgunj" target="_blank" rel="noopener noreferrer">
+      <span class="tile" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </span>
+      <span class="action-text">
+        <span class="action-title">Follow on Facebook</span>
+        <span class="action-sub"><span class="sub-text">Bajaj Maharajgunj · @BajajMaharajgunj</span></span>
+      </span>
+      <span class="action-arrow" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+      </span>
+    </a>
+
+    <a class="action action-tt" href="https://www.tiktok.com/tag/bajajmahaharajgunj" target="_blank" rel="noopener noreferrer">
+      <span class="tile" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      </span>
+      <span class="action-text">
+        <span class="action-title">Follow Us on TikTok</span>
+        <span class="action-sub"><span class="sub-text">Bikes, events &amp; more · #bajajmahaharajgunj</span></span>
+      </span>
+      <span class="action-arrow" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+      </span>
+    </a>
+
+    <a class="action action-insta" href="https://www.instagram.com/bajajmaharajgunj/?hl=en" target="_blank" rel="noopener noreferrer">
+      <span class="tile" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </span>
+      <span class="action-text">
+        <span class="action-title">Follow on Instagram</span>
+        <span class="action-sub"><span class="sub-text">@bajajmaharajgunj · New bikes, rides &amp; events</span></span>
+      </span>
+      <span class="action-arrow" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+      </span>
+    </a>
+
+    <!-- ---- Price list ---- -->
+    <div class="section-label"><span>Showroom Price List</span></div>
+
+    <section class="card price-card" id="priceCard">
+      <h3 class="price-h3">
+        <button class="price-toggle" id="priceToggle" type="button" aria-expanded="false" aria-controls="priceBody">
+          <span class="tile tile-red" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+          </span>
+          <span class="price-head-text">
+            <span class="price-title">Bajaj Price List</span>
+            <span class="price-meta">18 models · Effective 2083-06-08 (B.S.)</span>
+          </span>
+          <span class="price-chev" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </span>
+        </button>
+      </h3>
+
+      <div class="price-body" id="priceBody" role="region" aria-labelledby="priceToggle">
+        <div class="price-inner">
+          <div class="price-content">
+
+            <div class="pgroup">
+              <div class="pg-head">
+                <span class="pg-name">Chetak</span>
+                <span class="ev-tag">Electric</span>
+                <span class="pg-count">3 models</span>
+              </div>
+              <div class="prow"><span class="m">Chetak 3501</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>389,900</span></div>
+              <div class="prow"><span class="m">Chetak C2501</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>281,900</span></div>
+              <div class="prow"><span class="m">Chetak C3503</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>349,900</span></div>
+            </div>
+
+            <div class="pgroup">
+              <div class="pg-head">
+                <span class="pg-name">Pulsar</span>
+                <span class="pg-count">11 models</span>
+              </div>
+              <div class="prow"><span class="m">Pulsar N 125 BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>326,900</span></div>
+              <div class="prow"><span class="m">Pulsar N 150 BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>403,900</span></div>
+              <div class="prow"><span class="m">Pulsar 150 SD BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>369,900</span></div>
+              <div class="prow"><span class="m">Pulsar 150 TD BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>390,900</span></div>
+              <div class="prow"><span class="m">Pulsar 400 NS BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>629,900</span></div>
+              <div class="prow"><span class="m">Pulsar 125 Neon BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>314,900</span></div>
+              <div class="prow"><span class="m">Pulsar 220 F ABS FI BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>464,900</span></div>
+              <div class="prow"><span class="m">Pulsar N 160 DC ABS BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>447,900</span></div>
+              <div class="prow"><span class="m">Pulsar N 250 DC ABS BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>529,900</span></div>
+              <div class="prow"><span class="m">Pulsar 125 NS ABS FI BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>351,900</span></div>
+              <div class="prow"><span class="m">Pulsar 200 NS FI DC ABS BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>479,900</span></div>
+            </div>
+
+            <div class="pgroup">
+              <div class="pg-head">
+                <span class="pg-name">Avenger</span>
+                <span class="pg-count">2 models</span>
+              </div>
+              <div class="prow"><span class="m">Avenger 220 Cruise</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>432,900</span></div>
+              <div class="prow"><span class="m">Avenger 160 Street ABS</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>389,900</span></div>
+            </div>
+
+            <div class="pgroup">
+              <div class="pg-head">
+                <span class="pg-name">Platina</span>
+                <span class="pg-count">1 model</span>
+              </div>
+              <div class="prow"><span class="m">Platina 100 ES BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>261,900</span></div>
+            </div>
+
+            <div class="pgroup">
+              <div class="pg-head">
+                <span class="pg-name">Dominar</span>
+                <span class="pg-count">1 model</span>
+              </div>
+              <div class="prow"><span class="m">Dominar 400 ABS BS6</span><span class="dots"></span><span class="p"><span class="rs">Rs.</span>663,900</span></div>
+            </div>
+
+            <p class="price-note">
+              All prices in Nepali Rupees (NPR), ex-showroom retail price. Subject to change without prior notice.
+              Insurance premium is quoted at the showroom.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p class="thanks">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      Thank you for visiting Bajaj Maharajgunj
+    </p>
+    <p class="auth">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+      Authorized Bajaj Motorcycle Dealer
+    </p>
+    <p class="footer-legal">Divya Auto Hub Pvt. Ltd. · Maharajgunj-03, Chakrapath, Kathmandu, Nepal</p>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg class="ic-ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+    <svg class="ic-info" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+    <span id="toastMsg"></span>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ============ Showroom config — edit here ============ */
+      var WIFI_SSID = 'NTFiber_31D8_2.4G';
+      var WIFI_PASS = 'ea4dn2fX';
+      var WIFI_URI  = 'WIFI:T:WPA;S:' + WIFI_SSID + ';P:' + WIFI_PASS + ';;';
+      /* ====================================================== */
+
+      var toastEl   = document.getElementById('toast');
+      var toastMsg  = document.getElementById('toastMsg');
+      var toastTimer = null;
+
+      function toast(msg, type) {
+        toastMsg.textContent = msg;
+        toastEl.classList.toggle('toast-info', type === 'info');
+        toastEl.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 3200);
+      }
+
+      /* Fallback copy for older / restricted browsers */
+      function legacyCopy(text) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:-1000px;left:-1000px;opacity:0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        return ok;
+      }
+
+      /* ---- Copy buttons (SSID / password) ---- */
+      Array.prototype.forEach.call(document.querySelectorAll('.copy-btn'), function (btn) {
+        btn.addEventListener('click', function () {
+          var text  = btn.getAttribute('data-copy');
+          var label = btn.getAttribute('data-label') || 'Value';
+          var finish = function (ok) {
+            if (ok) {
+              btn.classList.add('copied');
+              toast(label + ' copied');
+              setTimeout(function () { btn.classList.remove('copied'); }, 1800);
+            } else {
+              toast('Couldn\u2019t copy \u2014 please note it down manually', 'info');
+            }
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(
+              function () { finish(true); },
+              function () { finish(legacyCopy(text)); }
+            );
+          } else {
+            finish(legacyCopy(text));
+          }
+        });
+      });
+
+      /* ---- Connect Wi-Fi button (platform-aware) ---- */
+      var ua = navigator.userAgent || '';
+      var isAndroid = /android/i.test(ua);
+      var isIOS = /iphone|ipad|ipod/i.test(ua) ||
+                  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var fallbackTimer = null;
+
+      document.getElementById('connectBtn').addEventListener('click', function () {
+        clearTimeout(fallbackTimer);
+
+        if (isAndroid) {
+          /* Try the WIFI: URI; if the device can't handle it, fall back politely. */
+          fallbackTimer = setTimeout(function () {
+            toast('Automatic join isn\u2019t supported here \u2014 copy the details above', 'info');
+          }, 1800);
+          try {
+            window.location.href = WIFI_URI;
+          } catch (e) {
+            clearTimeout(fallbackTimer);
+            toast('Copy the details above and join from Settings', 'info');
+          }
+        } else if (isIOS) {
+          /* iOS can't join via URI from a page — copy the password and guide the user. */
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(WIFI_PASS).then(function () {
+              toast('Password copied — open Settings › Wi-Fi and join ' + WIFI_SSID, 'info');
+            }, function () {
+              toast('Open Settings › Wi-Fi and join ' + WIFI_SSID, 'info');
+            });
+          } else {
+            toast('Open Settings › Wi-Fi and join ' + WIFI_SSID, 'info');
+          }
+        } else {
+          toast('Join from your phone\u2019s Wi-Fi settings — details are on the card', 'info');
+        }
+      });
+
+      /* If the WIFI: URI actually navigated away, don't show the fallback toast. */
+      window.addEventListener('pagehide', function () { clearTimeout(fallbackTimer); });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) { clearTimeout(fallbackTimer); }
+      });
+
+      /* ---- Price list accordion ---- */
+      var priceCard   = document.getElementById('priceCard');
+      var priceToggle = document.getElementById('priceToggle');
+      if (priceCard && priceToggle) {
+        priceToggle.addEventListener('click', function () {
+          var open = priceCard.classList.toggle('open');
+          priceToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      /* Pause the rotating emblem ring for reduced-motion users */
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.emblem-ring animateTransform'),
+          function (a) { if (a.parentNode) a.parentNode.removeChild(a); }
+        );
+      }
+    })();
+  </script>
+</body>
+</html>
